@@ -40,6 +40,10 @@ class advanced:
     def div(self):
         return self.x / self.y
 
+    # This function gives the power of a number
+    def power(self):
+        return self.x ** self.y
+
     # Operation Type
     def decision (self, operator):
         if operator == '+':
@@ -50,3 +54,5 @@ class advanced:
             return self.multi()
         elif operator == '/':
             return self.div()
+        elif operator == '**':
+            return self.power()
