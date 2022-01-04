@@ -73,3 +73,27 @@ if choice == '2':
         adv = mn.advanced(x, y)
         result = adv.decision(operator)
         print(x, operator, y, '=', result)
+
+    if operator == '-':
+        split_calculation = calculation.split('-', 1)
+        x = int(split_calculation[0])
+        y = int(split_calculation[1])
+        adv = mn.advanced(x, y)
+        result = adv.decision(operator)
+        print(x, operator, y, '=', result)
+
+    if operator == '*':
+        split_calculation = calculation.split('*', 1)
+        x = int(split_calculation[0])
+        y = int(split_calculation[1])
+        adv = mn.advanced(x, y)
+        result = adv.decision(operator)
+        print(x, operator, y, '=', result)
+
+    if operator == '/':
+        split_calculation = calculation.split('/', 1)
+        x = int(split_calculation[0])
+        y = int(split_calculation[1])
+        adv = mn.advanced(x, y)
+        result = adv.decision(operator)
+        print(x, operator, y, '=', result)
