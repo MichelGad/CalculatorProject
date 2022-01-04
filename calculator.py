@@ -49,7 +49,7 @@ if choice == '1':
 
             # check if user wants another calculation
             # break the while loop if answer is no
-            quit = input('Do you want to close the calculator? (y/n): ')
+            quit = input('Do you want to quit the calculator? (y/n): ')
             if quit == 'y':
                 break
     else:
@@ -64,45 +64,53 @@ if choice == '2':
         calculation = input("Enter your calculation: ")
 
         for num in calculation:
-            if num == '+' or num == '-' or num == '*' or num == '/':
+            if num == '+' or num == '-' or num == '*' or num == '/' or num == '^':
                 operator = num.strip()
                 break
 
         if operator == '+':
             split_calculation = calculation.split('+', 1)
-            x = int(split_calculation[0])
-            y = int(split_calculation[1])
+            x = float(split_calculation[0])
+            y = float(split_calculation[1])
             adv = mn.advanced(x, y)
             result = adv.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '-':
             split_calculation = calculation.split('-', 1)
-            x = int(split_calculation[0])
-            y = int(split_calculation[1])
+            x = float(split_calculation[0])
+            y = float(split_calculation[1])
             adv = mn.advanced(x, y)
             result = adv.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '*':
             split_calculation = calculation.split('*', 1)
-            x = int(split_calculation[0])
-            y = int(split_calculation[1])
+            x = float(split_calculation[0])
+            y = float(split_calculation[1])
             adv = mn.advanced(x, y)
             result = adv.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '/':
             split_calculation = calculation.split('/', 1)
-            x = int(split_calculation[0])
-            y = int(split_calculation[1])
+            x = float(split_calculation[0])
+            y = float(split_calculation[1])
+            adv = mn.advanced(x, y)
+            result = adv.decision(operator)
+            print(x, operator, y, '=', result)
+
+        if operator == '^':
+            split_calculation = calculation.split('^', 1)
+            x = float(split_calculation[0])
+            y = float(split_calculation[1])
             adv = mn.advanced(x, y)
             result = adv.decision(operator)
             print(x, operator, y, '=', result)
 
         # check if user wants another calculation
         # break the while loop if answer is no
-        quit = input('Do you want to close the calculator? (y/n): ')
+        quit = input('Do you want to quit the calculator? (y/n): ')
         if quit == 'y':
             break
     else:

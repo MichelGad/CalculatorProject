@@ -54,5 +54,5 @@ class advanced:
             return self.multi()
         elif operator == '/':
             return self.div()
-        elif operator == '**':
+        elif operator == '^':
             return self.power()
