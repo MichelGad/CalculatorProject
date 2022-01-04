@@ -41,7 +41,7 @@ class advanced:
         return self.x / self.y
 
     # Operation Type
-    def operator(self, operator):
+    def decision (self, operator):
         if operator == '+':
             return self.add()
         elif operator == '-':

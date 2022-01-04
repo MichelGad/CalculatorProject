@@ -57,25 +57,19 @@ if choice == '1':
 
 # Advanced Calculator
 if choice == '2':
+    operator = ''
+
     calculation = input("Enter your calculation: ")
 
-    # Import Numbers into Variables
-    x = int(calculation[0])
-    y = int(calculation[2])
+    for num in calculation:
+        if num == '+' or num == '-' or num == '*' or num == '/':
+            operator = num.strip()
+            break
 
-    # Import the operation type
-    operation = calculation[1]
-
-    adv= mn.advanced(x, y)
-    result= adv.operator(operation)
-    print(x, operation, y, '=', result)
-
-    while True:
-        x = result
-        next_step = input("Next Step: ")
-        y = int(next_step[1])
-        # Import the operation type
-        operation = next_step[0]
+    if operator == '+':
+        split_calculation = calculation.split('+', 1)
+        x = int(split_calculation[0])
+        y = int(split_calculation[1])
         adv = mn.advanced(x, y)
-        result = adv.operator(operation)
-        print(x, operation, y, '=', result)
+        result = adv.decision(operator)
+        print(x, operator, y, '=', result)
