@@ -5,7 +5,7 @@ import main as mn
 # Select Calculator Type
 print('**************************')
 print("Select calculator type.")
-print('1.Simple')
+print('1.Basic')
 print('2.Advanced')
 print('3.Scientific')
 print('**************************')
@@ -15,7 +15,7 @@ choice = input('Enter your choice(1/2/3): ')
 
 # Simple Calculator
 if choice == '1':
-    print('Simple Calculator')
+    print('Basic Calculator')
     print('**************************')
     print('Select operation.')
     print('1.Add')
@@ -58,6 +58,8 @@ if choice == '1':
 # Advanced Calculator
 if choice == '2':
     operator = ''
+    print('Advanced Calculator')
+    print('**************************')
 
     while True:
 
