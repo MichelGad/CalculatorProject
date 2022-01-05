@@ -185,8 +185,7 @@ if choice == '3':
 
         if str_operator == 'log':
             x = float(num[0])
-            y = ()
-            sci = mn.scientific(x)
+            sci = mn.new_scientific(x)
             result = sci.str_decision(str_operator)
             print(str_operator, x, '=', result)
 

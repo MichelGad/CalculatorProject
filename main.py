@@ -98,6 +98,15 @@ class scientific:
         elif operator == '^':
             return self.exponent()
 
+
+class new_scientific:
+    def __init__(self, x):
+        self.x = x
+
+    # This function gives the log of a number
+    def log(self):
+        return math.log(int(self.x))
+
     def str_decision(self, str_operator):
         if str_operator == 'log':
-            return self.add()
+            return self.log()
