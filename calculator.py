@@ -1,6 +1,7 @@
 
 # Import the classes and functions from the main file
 import main as mn
+import re
 
 # Select Calculator Type
 print('**************************')
@@ -74,39 +75,30 @@ if choice == '2':
 
         calculation = input("Enter your equation: ")
 
-        for num in calculation:
-            if num == '+' or num == '-' or num == '*' or num == '/' or num == '^':
-                operator = num.strip()
-                break
+        for i in calculation:
+            if i == '+' or i == '-' or i == '*' or i == '/' or i == '^':
+                operator = i.strip()
+
+        num= re.findall(r'\d+(?:\.\d+)?', calculation)
+        x = float(num[0])
+        y = float(num[1])
 
         if operator == '+':
-            split_calculation = calculation.split('+', 1)
-            x = float(split_calculation[0])
-            y = float(split_calculation[1])
             adv = mn.advanced(x, y)
             result = adv.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '-':
-            split_calculation = calculation.split('-', 1)
-            x = float(split_calculation[0])
-            y = float(split_calculation[1])
             adv = mn.advanced(x, y)
             result = adv.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '*':
-            split_calculation = calculation.split('*', 1)
-            x = float(split_calculation[0])
-            y = float(split_calculation[1])
             adv = mn.advanced(x, y)
             result = adv.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '/':
-            split_calculation = calculation.split('/', 1)
-            x = float(split_calculation[0])
-            y = float(split_calculation[1])
             adv = mn.advanced(x, y)
             result = adv.decision(operator)
             print(x, operator, y, '=', result)
@@ -143,57 +135,46 @@ if choice == '3':
 
         calculation = input("Enter your equation: ")
 
-        for num in calculation:
-            if num == '+' or num == '-' or num == '*' or num == '/' or num == '^':
-                operator = num.strip()
-                break
+        for i in calculation:
+            if i == '+' or i == '-' or i == '*' or i == '/' or i == '^':
+                operator = i.strip()
+
+        str_operator = ''.join(re.split("[^a-zA-Z]*", calculation))
+
+        num= re.findall(r'\d+(?:\.\d+)?', calculation)
+        x = float(num[0])
+        y = float(num[1])
 
         if operator == '+':
-            split_calculation = calculation.split('+', 1)
-            x = float(split_calculation[0])
-            y = float(split_calculation[1])
-            adv = mn.advanced(x, y)
-            result = adv.decision(operator)
+            sci = mn.scientific(x, y)
+            result = sci.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '-':
-            split_calculation = calculation.split('-', 1)
-            x = float(split_calculation[0])
-            y = float(split_calculation[1])
-            adv = mn.advanced(x, y)
-            result = adv.decision(operator)
+            sci = mn.scientific(x, y)
+            result = sci.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '*':
-            split_calculation = calculation.split('*', 1)
-            x = float(split_calculation[0])
-            y = float(split_calculation[1])
-            adv = mn.advanced(x, y)
-            result = adv.decision(operator)
+            sci = mn.scientific(x, y)
+            result = sci.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '/':
-            split_calculation = calculation.split('/', 1)
-            x = float(split_calculation[0])
-            y = float(split_calculation[1])
-            adv = mn.advanced(x, y)
-            result = adv.decision(operator)
+            sci = mn.scientific(x, y)
+            result = sci.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '^':
-            split_calculation = calculation.split('^', 1)
-            x = float(split_calculation[0])
-            y = float(split_calculation[1])
-            adv = mn.advanced(x, y)
-            result = adv.decision(operator)
+            sci = mn.scientific(x, y)
+            result = sci.decision(operator)
             print(x, operator, y, '=', result)
 
-        if operator == 'log':
-            split_calculation = calculation.split('log', 1)
-            x = float(split_calculation[0])
-            adv = mn.advanced(x)
-            result = adv.decision(operator)
-            print(operator, x, '=', result)
+        if str_operator == 'log':
+            y=()
+            sci = mn.scientific(x)
+            result = sci.str_decision(str_operator)
+            print(str_operator, x, '=', result)
 
         # check if user wants another calculation
         # break the while loop if answer is no

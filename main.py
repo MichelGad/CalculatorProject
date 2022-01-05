@@ -81,7 +81,7 @@ class scientific:
 
     # This function gives the log of a number
     def log(self):
-        return math.log(self.x)
+        return math.log(int(self.x))
 
     # Operation Type
     def decision (self, operator):
@@ -95,5 +95,7 @@ class scientific:
             return self.div()
         elif operator == '^':
             return self.exponent()
-        elif operator == 'log':
-            return self.log()
+
+    def str_decision (self, str_operator):
+        if str_operator == 'log':
+            return self.add()
