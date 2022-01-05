@@ -17,7 +17,7 @@ while True:
     if choice in ('1', '2', '3'):
         break
     else:
-        continue
+        print("Invalid Input")
 
 # Simple Calculator
 if choice == '1':
@@ -40,7 +40,7 @@ if choice == '1':
         if choice in ('1', '2', '3', '4'):
             x = float(input('Enter first number: '))
             y = float(input('Enter second number: '))
-            obj= mn.simp(x,y)
+            obj = mn.simp(x, y)
 
             if choice == '1':
                 print(x, '+', y, '=', obj.add())
@@ -56,11 +56,11 @@ if choice == '1':
 
             # check if user wants another calculation
             # break the while loop if answer is no
-            quit = input('Do you want to quit the calculator? (y/n): ')
-            if quit == 'y':
+            quite = input('Do you want to quite the calculator? (y/n): ')
+            if quite == 'y':
                 break
-    else:
-        print("Invalid Input")
+        else:
+            print("Invalid Input")
 
 # Advanced Calculator
 if choice == '2':
@@ -84,7 +84,7 @@ if choice == '2':
             if i == '+' or i == '-' or i == '*' or i == '/':
                 operator = i.strip()
 
-        num= re.findall(r'\d+(?:\.\d+)?', calculation)
+        num = re.findall(r'\d+(?:\.\d+)?', calculation)
         x = float(num[0])
         y = float(num[1])
 
@@ -110,11 +110,11 @@ if choice == '2':
 
         # check if user wants another calculation
         # break the while loop if answer is no
-        quit = input('Do you want to quit the calculator? (y/n): ')
-        if quit == 'y':
+        quite = input('Do you want to quite the calculator? (y/n): ')
+        if quite == 'y':
             break
-    else:
-        print("Invalid Input")
+        else:
+            print("Invalid Input")
 
 # Scientific Calculator
 if choice == '3':
@@ -132,7 +132,7 @@ if choice == '3':
     print('tan')
     print('sin')
     print('cos')
-    print ('Factorial')
+    print('Factorial')
     print('log')
     print('**************************')
 
@@ -146,7 +146,7 @@ if choice == '3':
 
         str_operator = ''.join(re.split("[^a-zA-Z]*", calculation))
 
-        num= re.findall(r'\d+(?:\.\d+)?', calculation)
+        num = re.findall(r'\d+(?:\.\d+)?', calculation)
 
         if operator == '+':
             x = float(num[0])
@@ -185,15 +185,15 @@ if choice == '3':
 
         if str_operator == 'log':
             x = float(num[0])
-            y=()
+            y = ()
             sci = mn.scientific(x)
             result = sci.str_decision(str_operator)
             print(str_operator, x, '=', result)
 
         # check if user wants another calculation
         # break the while loop if answer is no
-        quit = input('Do you want to quit the calculator? (y/n): ')
-        if quit == 'y':
+        quite = input('Do you want to quite the calculator? (y/n): ')
+        if quite == 'y':
             break
-    else:
-        print("Invalid Input")
+        else:
+            print("Invalid Input")

@@ -1,9 +1,10 @@
 import math
 
+
 class simp:
     def __init__(self, x, y):
-        self.x= x
-        self.y= y
+        self.x = x
+        self.y = y
 
     # This function adds two numbers
     def add(self):
@@ -20,11 +21,12 @@ class simp:
     # This function divides two numbers
     def div(self):
         return self.x / self.y
+
 
 class advanced:
     def __init__(self, x, y):
-        self.x= x
-        self.y= y
+        self.x = x
+        self.y = y
 
     # This function adds two numbers
     def add(self):
@@ -42,9 +44,8 @@ class advanced:
     def div(self):
         return self.x / self.y
 
-
     # Operation Type
-    def decision (self, operator):
+    def decision(self, operator):
         if operator == '+':
             return self.add()
         elif operator == '-':
@@ -54,10 +55,11 @@ class advanced:
         elif operator == '/':
             return self.div()
 
+
 class scientific:
     def __init__(self, x, y):
-        self.x= x
-        self.y= y
+        self.x = x
+        self.y = y
 
     # This function adds two numbers
     def add(self):
@@ -84,7 +86,7 @@ class scientific:
         return math.log(int(self.x))
 
     # Operation Type
-    def decision (self, operator):
+    def decision(self, operator):
         if operator == '+':
             return self.add()
         elif operator == '-':
@@ -96,6 +98,6 @@ class scientific:
         elif operator == '^':
             return self.exponent()
 
-    def str_decision (self, str_operator):
+    def str_decision(self, str_operator):
         if str_operator == 'log':
             return self.add()
