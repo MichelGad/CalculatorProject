@@ -59,8 +59,10 @@ if choice == '1':
             quite = input('Do you want to quite the calculator? (y/n): ')
             if quite == 'y':
                 break
-        else:
-            print("Invalid Input")
+            elif quite == 'n':
+                continue
+            else:
+                print("Invalid Input")
 
 # Advanced Calculator
 if choice == '2':
@@ -84,7 +86,7 @@ if choice == '2':
             if i == '+' or i == '-' or i == '*' or i == '/':
                 operator = i.strip()
 
-        num = re.findall(r'\d+(?:\.\d+)?', calculation)
+        num = re.findall(r'-?\d+\.?\d*', calculation)
         x = float(num[0])
         y = float(num[1])
 
@@ -113,6 +115,8 @@ if choice == '2':
         quite = input('Do you want to quite the calculator? (y/n): ')
         if quite == 'y':
             break
+        elif quite == 'n':
+            continue
         else:
             print("Invalid Input")
 
@@ -141,12 +145,12 @@ if choice == '3':
         calculation = input("Enter your equation: ")
 
         for i in calculation:
-            if i == '+' or i == '-' or i == '*' or i == '/' or i == '^':
+            if i == '+' or i == '-' or i == '*' or i == '/' or i == '^' or i == '!':
                 operator = i.strip()
 
         str_operator = ''.join(re.split("[^a-zA-Z]*", calculation))
 
-        num = re.findall(r'\d+(?:\.\d+)?', calculation)
+        num = re.findall(r'-?\d+\.?\d*', calculation)
 
         if operator == '+':
             x = float(num[0])
@@ -207,10 +211,19 @@ if choice == '3':
             result = sci.str_decision(str_operator)
             print(str_operator, x, '=', result)
 
+        if operator == '!':
+            str_operator = operator
+            x = int(num[0])
+            sci = mn.new_scientific(x)
+            result = sci.str_decision(str_operator)
+            print(str_operator, x, '=', result)
+
         # check if user wants another calculation
         # break the while loop if answer is no
         quite = input('Do you want to quite the calculator? (y/n): ')
         if quite == 'y':
             break
-    else:
-        print("Invalid Input")
+        elif quite == 'n':
+            continue
+        else:
+            print("Invalid Input")

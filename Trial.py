@@ -1,11 +1,11 @@
-choice = input('Enter choice(1/2/3/4): ')
+import re
 
+calculation = input('Enter your equation: ')
 
-# check if choice is one of the four options
-if choice in ('1', '2', '3', '4'):
-     x = input('Enter first number: ')
+num = re.findall(r'-?\d+\.?\d*', calculation)
 
-    if x == int:
-        print('invalid Input')
-    else:
-        break
+x = float(num[0])
+y = float(num[1])
+
+print(x)
+print(y)

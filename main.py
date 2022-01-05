@@ -119,12 +119,18 @@ class new_scientific:
     def log(self):
         return math.log(int(self.x))
 
+    # This function gives the log of a number
+    def fact(self):
+        return math.factorial(int(self.x))
+
     def str_decision(self, str_operator):
         if str_operator == 'cos':
-            return self.tan()
+            return self.cos()
         if str_operator == 'sin':
-            return self.log()
+            return self.sin()
         if str_operator == 'tan':
-            return self.log()
+            return self.tan()
         if str_operator == 'log':
             return self.log()
+        if str_operator == '!':
+            return self.fact()
