@@ -1,3 +1,5 @@
+import math
+
 class simp:
     def __init__(self, x, y):
         self.x= x
@@ -73,9 +75,13 @@ class scientific:
     def div(self):
         return self.x / self.y
 
-    # This function gives the power of a number
-    def power(self):
+    # This function gives the exponent power of a number
+    def exponent(self):
         return self.x ** self.y
+
+    # This function gives the log of a number
+    def log(self):
+        return math.log(self.x)
 
     # Operation Type
     def decision (self, operator):
@@ -88,4 +94,6 @@ class scientific:
         elif operator == '/':
             return self.div()
         elif operator == '^':
-            return self.power()
+            return self.exponent()
+        elif operator == 'log':
+            return self.log()

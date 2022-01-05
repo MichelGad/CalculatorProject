@@ -188,6 +188,13 @@ if choice == '3':
             result = adv.decision(operator)
             print(x, operator, y, '=', result)
 
+        if operator == 'log':
+            split_calculation = calculation.split('log', 1)
+            x = float(split_calculation[0])
+            adv = mn.advanced(x)
+            result = adv.decision(operator)
+            print(operator, x, '=', result)
+
         # check if user wants another calculation
         # break the while loop if answer is no
         quit = input('Do you want to quit the calculator? (y/n): ')
