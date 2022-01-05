@@ -1,15 +1,14 @@
-
 # Import the classes and functions from the main file
 import main as mn
 import re
 
 # Select Calculator Type
-print('**************************')
+print('*********************************')
 print("Select calculator type.")
 print('1.Basic')
 print('2.Advanced')
 print('3.Scientific')
-print('**************************')
+print('*********************************')
 
 # take input from the user
 while True:
@@ -21,20 +20,19 @@ while True:
 
 # Simple Calculator
 if choice == '1':
-    print('**************************')
-    print('Basic Calculator')
-    print('**************************')
-    print('Select operation.')
-    print('1.Addition')
-    print('2.Subtraction')
-    print('3.Multiplication')
-    print('4.Division')
-    print('**************************')
-
-    # check if choice is one of the four options
-    choice = input('Enter choice(1/2/3/4): ')
-
     while True:
+        print('*********************************')
+        print('Basic Calculator')
+        print('*********************************')
+        print('Select operation.')
+        print('1.Addition')
+        print('2.Subtraction')
+        print('3.Multiplication')
+        print('4.Division')
+        print('*********************************')
+
+        # check if choice is one of the four options
+        choice = input('Enter choice(1/2/3/4): ')
 
         # check if choice is one of the four options
         if choice in ('1', '2', '3', '4'):
@@ -67,16 +65,16 @@ if choice == '1':
 # Advanced Calculator
 if choice == '2':
     operator = ''
-    print('**************************')
+    print('*********************************')
     print('Advanced Calculator')
-    print('**************************')
+    print('*********************************')
     print('Equation Format: X operator Y')
-    print('**************************')
+    print('*********************************')
     print('Addition +')
     print('Subtraction -')
     print('Multiplication *')
     print('Division /')
-    print('**************************')
+    print('*********************************')
 
     while True:
 
@@ -123,22 +121,17 @@ if choice == '2':
 # Scientific Calculator
 if choice == '3':
     operator = ''
-    print('**************************')
+    print('*********************************')
     print('Scientific Calculator')
-    print('**************************')
+    print('*********************************')
     print('Equation Format: X operator Y')
-    print('**************************')
-    print('Addition +')
-    print('Subtraction -')
-    print('Multiplication *')
-    print('Division /')
-    print('Exponent ^')
-    print('tan')
-    print('sin')
-    print('cos')
-    print('Factorial')
-    print('log')
-    print('**************************')
+    print('*********************************')
+    print('Addition +       | Factorial !')
+    print('Subtraction -    | sin')
+    print('Multiplication * | cos')
+    print('Division /       | tan')
+    print('Exponent ^       | log')
+    print('*********************************')
 
     while True:
 
