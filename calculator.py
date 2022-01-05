@@ -183,6 +183,24 @@ if choice == '3':
             result = sci.decision(operator)
             print(x, operator, y, '=', result)
 
+        if str_operator == 'cos':
+            x = float(num[0])
+            sci = mn.new_scientific(x)
+            result = sci.str_decision(str_operator)
+            print(str_operator, x, '=', result)
+
+        if str_operator == 'sin':
+            x = float(num[0])
+            sci = mn.new_scientific(x)
+            result = sci.str_decision(str_operator)
+            print(str_operator, x, '=', result)
+
+        if str_operator == 'tan':
+            x = float(num[0])
+            sci = mn.new_scientific(x)
+            result = sci.str_decision(str_operator)
+            print(str_operator, x, '=', result)
+
         if str_operator == 'log':
             x = float(num[0])
             sci = mn.new_scientific(x)
@@ -194,5 +212,5 @@ if choice == '3':
         quite = input('Do you want to quite the calculator? (y/n): ')
         if quite == 'y':
             break
-        else:
-            print("Invalid Input")
+    else:
+        print("Invalid Input")

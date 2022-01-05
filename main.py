@@ -104,9 +104,27 @@ class new_scientific:
         self.x = x
 
     # This function gives the log of a number
+    def cos(self):
+        return math.cos(int(self.x))
+
+    # This function gives the log of a number
+    def sin(self):
+        return math.sin(int(self.x))
+
+    # This function gives the log of a number
+    def tan(self):
+        return math.tan(int(self.x))
+
+    # This function gives the log of a number
     def log(self):
         return math.log(int(self.x))
 
     def str_decision(self, str_operator):
+        if str_operator == 'cos':
+            return self.tan()
+        if str_operator == 'sin':
+            return self.log()
+        if str_operator == 'tan':
+            return self.log()
         if str_operator == 'log':
             return self.log()
