@@ -12,7 +12,12 @@ print('3.Scientific')
 print('**************************')
 
 # take input from the user
-choice = input('Enter your choice(1/2/3): ')
+while True:
+    choice = input('Enter your choice(1/2/3): ')
+    if choice in ('1', '2', '3'):
+        break
+    else:
+        continue
 
 # Simple Calculator
 if choice == '1':
@@ -76,7 +81,7 @@ if choice == '2':
         calculation = input("Enter your equation: ")
 
         for i in calculation:
-            if i == '+' or i == '-' or i == '*' or i == '/' or i == '^':
+            if i == '+' or i == '-' or i == '*' or i == '/':
                 operator = i.strip()
 
         num= re.findall(r'\d+(?:\.\d+)?', calculation)
@@ -142,35 +147,44 @@ if choice == '3':
         str_operator = ''.join(re.split("[^a-zA-Z]*", calculation))
 
         num= re.findall(r'\d+(?:\.\d+)?', calculation)
-        x = float(num[0])
-        y = float(num[1])
 
         if operator == '+':
+            x = float(num[0])
+            y = float(num[1])
             sci = mn.scientific(x, y)
             result = sci.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '-':
+            x = float(num[0])
+            y = float(num[1])
             sci = mn.scientific(x, y)
             result = sci.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '*':
+            x = float(num[0])
+            y = float(num[1])
             sci = mn.scientific(x, y)
             result = sci.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '/':
+            x = float(num[0])
+            y = float(num[1])
             sci = mn.scientific(x, y)
             result = sci.decision(operator)
             print(x, operator, y, '=', result)
 
         if operator == '^':
+            x = float(num[0])
+            y = float(num[1])
             sci = mn.scientific(x, y)
             result = sci.decision(operator)
             print(x, operator, y, '=', result)
 
         if str_operator == 'log':
+            x = float(num[0])
             y=()
             sci = mn.scientific(x)
             result = sci.str_decision(str_operator)
