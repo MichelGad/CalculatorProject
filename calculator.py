@@ -248,8 +248,8 @@ while True:
                 if i == '+' or i == '-' or i == '*' or i == '/':
                     operator = i.strip()
 
-            num = re.findall(r'-?\d+\.?\d*', next_step)
             x = result
+            num = re.findall(r'-?\d+\.?\d*', next_step)
             y = float(num[0])
 
     if choice == 'q':
