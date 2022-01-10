@@ -38,8 +38,25 @@ while True:
 
             # check if choice is one of the four options
             if choice in ('1', '2', '3', '4'):
-                x = float(input('Enter first number: '))
-                y = float(input('Enter second number: '))
+
+                while True:
+                    x = input('Enter first number: ')
+                    try:
+                        x = float(x)
+                        break
+                    except ValueError:
+                        print('not a number!')
+                        continue
+
+                while True:
+                    y = input('Enter second number: ')
+                    try:
+                        y = float(y)
+                        break
+                    except ValueError:
+                        print('not a number!')
+                        continue
+
                 obj = mn.simp(x, y)
 
                 if choice == '1':
@@ -82,17 +99,18 @@ while True:
         print('Division /')
         print('*********************************')
 
+
+        calculation = input("Enter your equation: ")
+
+        for i in calculation:
+            if i == '+' or i == '-' or i == '*' or i == '/':
+                operator = i.strip()
+
+        num = re.findall(r'-?\d+\.?\d*', calculation)
+        x = float(num[0])
+        y = float(num[1])
+
         while True:
-
-            calculation = input("Enter your equation: ")
-
-            for i in calculation:
-                if i == '+' or i == '-' or i == '*' or i == '/':
-                    operator = i.strip()
-
-            num = re.findall(r'-?\d+\.?\d*', calculation)
-            x = float(num[0])
-            y = float(num[1])
 
             if operator == '+':
                 adv = mn.advanced(x, y)
