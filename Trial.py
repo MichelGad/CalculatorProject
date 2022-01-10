@@ -93,8 +93,8 @@ for i in calculation:
 
     # check if user wants another calculation
     # break the while loop if answer is no
-    x = result
     print('If you want to quit: Write(q)')
+    x = result
     next_step = input('Next Step: ')
     if next_step == 'q':
         break
@@ -104,4 +104,5 @@ for i in calculation:
                 operator = f.strip()
 
         num = re.findall(r'-?\d+\.?\d*', next_step)
+        x = result
         y = float(num[0])
