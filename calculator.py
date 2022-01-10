@@ -54,15 +54,19 @@ while True:
                 elif choice == '4':
                     print(x, '/', y, '=', obj.div())
 
+            else:
+                print("Invalid Input")
+                continue
+
                 # check if user wants another calculation
                 # break the while loop if answer is no
-                quite = input('Do you want to quit this calculator? (y/n): ')
-                if quite == 'y':
-                    break
-                elif quite == 'n':
-                    continue
-                else:
-                    print("Invalid Input")
+            quite = input('Do you want to quit this calculator? (y/n): ')
+            if quite == 'y':
+                break
+            elif quite == 'n':
+                continue
+            else:
+                print("Invalid Input")
 
     # Advanced Calculator
     if choice == '2':
