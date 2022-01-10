@@ -9,7 +9,7 @@ while True:
     print('1.Basic')
     print('2.Advanced')
     print('3.Scientific')
-    print('q.Quit')
+    print('Or q.Quit')
     print('*********************************')
 
     # take input from the user
@@ -112,13 +112,18 @@ while True:
 
             # check if user wants another calculation
             # break the while loop if answer is no
-            quite = input('Do you want to quit this calculator? (y/n): ')
-            if quite == 'y':
+            print('If you want to quit: Write(q)')
+            next_step = input('Next Step: ')
+            if next_step == 'q':
                 break
-            elif quite == 'n':
-                continue
             else:
-                print("Invalid Input")
+                for i in next_step:
+                    if i == '+' or i == '-' or i == '*' or i == '/':
+                        operator = i.strip()
+
+                num = re.findall(r'-?\d+\.?\d*', next_step)
+                x = result
+                y = float(num[0])
 
     # Scientific Calculator
     if choice == '3':
@@ -215,13 +220,18 @@ while True:
 
             # check if user wants another calculation
             # break the while loop if answer is no
-            quite = input('Do you want to quit this calculator? (y/n): ')
-            if quite == 'y':
+            print('If you want to quit: Write(q)')
+            next_step = input('Next Step: ')
+            if next_step == 'q':
                 break
-            elif quite == 'n':
-                continue
             else:
-                print("Invalid Input")
+                for i in next_step:
+                    if i == '+' or i == '-' or i == '*' or i == '/':
+                        operator = i.strip()
+
+                num = re.findall(r'-?\d+\.?\d*', next_step)
+                x = result
+                y = float(num[0])
 
     if choice == 'q':
         break
