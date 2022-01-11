@@ -8,51 +8,44 @@ print('Scientific Calculator')
 print('*********************************')
 print('Equation Format: X operator Y')
 print('*********************************')
-print('Addition +       | Factorial !')
+print('Addition +       | ')
 print('Subtraction -    | sin')
 print('Multiplication * | cos')
 print('Division /       | tan')
 print('Exponent ^       | log')
 print('*********************************')
 
-
 calculation = input("Enter your equation: ")
+
+for i in calculation:
+    if i == '+' or i == '-' or i == '*' or i == '/' or i == '^' or i == '!':
+        operator = i.strip()
+
+str_operator = ''.join(re.split("[^a-zA-Z]*", calculation))
+num = re.findall(r'-?\d+\.?\d*', calculation)
+
+if str_operator == 'sin' or str_operator == 'cos' or str_operator == 'tan' \
+        or str_operator == 'log' or str_operator == '^':
+    x = float(num[0])
 
 while True:
 
-    for i in calculation:
-        if i == '+' or i == '-' or i == '*' or i == '/' or i == '^' or i == '!':
-            operator = i.strip()
+    if str_operator == 'cos':
+        sci = mn.new_scientific(x)
+        result = sci.str_decision(str_operator)
+        print(str_operator, x, '=', result)
 
-    str_operator = ''.join(re.split("[^a-zA-Z]*", calculation))
-    num = re.findall(r'-?\d+\.?\d*', calculation)
+    if str_operator == 'sin':
+        sci = mn.new_scientific(x)
+        result = sci.str_decision(str_operator)
+        print(str_operator, x, '=', result)
 
-    if str_operator == 'sin' or str_operator == 'cos' or str_operator == 'tan' \
-            or str_operator == 'log' or str_operator == '^':
-        x = float(num[0])
+    if str_operator == 'tan':
+        sci = mn.new_scientific(x)
+        result = sci.str_decision(str_operator)
+        print(str_operator, x, '=', result)
 
-        if str_operator == 'cos':
-            sci = mn.new_scientific(x)
-            result = sci.str_decision(str_operator)
-            print(str_operator, x, '=', result)
-
-        if str_operator == 'sin':
-            sci = mn.new_scientific(x)
-            result = sci.str_decision(str_operator)
-            print(str_operator, x, '=', result)
-
-        if str_operator == 'tan':
-            sci = mn.new_scientific(x)
-            result = sci.str_decision(str_operator)
-            print(str_operator, x, '=', result)
-
-        if str_operator == 'log':
-            sci = mn.new_scientific(x)
-            result = sci.str_decision(str_operator)
-            print(str_operator, x, '=', result)
-
-    if operator == '!':
-        str_operator = operator
+    if str_operator == 'log':
         sci = mn.new_scientific(x)
         result = sci.str_decision(str_operator)
         print(str_operator, x, '=', result)
@@ -61,10 +54,10 @@ while True:
     if quite == 'y':
         break
     elif quite == 'n':
-        calculation = input("Enter your equation: ")
         continue
     else:
         print("Invalid Input")
+
 
 if operator == '+' or operator == '-' or operator == '*' or operator == '/' or operator == '^':
 
