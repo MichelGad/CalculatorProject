@@ -154,7 +154,7 @@ while True:
         print('*********************************')
         print('Equation Format: X operator Y')
         print('*********************************')
-        print('Addition +       | ')
+        print('Addition +       | Factorial!')
         print('Subtraction -    | sin')
         print('Multiplication * | cos')
         print('Division /       | tan')
@@ -175,7 +175,7 @@ while True:
             num = re.findall(r'-?\d+\.?\d*', calculation)
 
             if str_operator == 'sin' or str_operator == 'cos' or str_operator == 'tan' \
-                    or str_operator == 'log' or str_operator == '^':
+                    or str_operator == 'log' or str_operator == '^' or operator == '!':
 
                 x = float(num[0])
                 if str_operator == 'cos':
@@ -196,6 +196,11 @@ while True:
                 if str_operator == 'log':
                     sci = mn.new_scientific(x)
                     result = sci.str_decision(str_operator)
+                    print(str_operator, x, '=', result)
+
+                if operator == '!':
+                    sci = mn.new_scientific(x)
+                    result = sci.str_decision(operator)
                     print(str_operator, x, '=', result)
 
                 quite = input('Do you want to quit this calculator? (y/n): ')
