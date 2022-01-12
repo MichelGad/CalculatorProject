@@ -16,7 +16,7 @@ Each is made for a specific purpose
 ## Getting started
 -Prerequisites:
   - Install the python 3.8 or newer.
-  - Install the any python IDE.
+  - Install any python IDE.
 
 -Get the code:
     ```
