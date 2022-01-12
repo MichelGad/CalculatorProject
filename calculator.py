@@ -108,8 +108,6 @@ while True:
                 operator = i.strip()
                 break
 
-        print(operator)
-
         num = re.findall(r'-?\d+\.?\d*', calculation)
         x = float(num[0])
         y = float(num[1])
@@ -147,6 +145,7 @@ while True:
                 for i in next_step:
                     if i == '+' or i == '_' or i == '*' or i == '/':
                         operator = i.strip()
+                        break
 
                 num = re.findall(r'-?\d+\.?\d*', next_step)
                 x = result
@@ -159,12 +158,13 @@ while True:
         print('Scientific Calculator')
         print('*********************************')
         print('Equation Format: X operator Y')
+        print('Equation Format: operator X')
         print('*********************************')
         print('Addition +       | Factorial!')
-        print('Subtraction _    | sin')
-        print('Multiplication * | cos')
-        print('Division /       | tan')
-        print('Exponent ^       | log')
+        print('Subtraction _    | Sine sin')
+        print('Multiplication * | Cose cos')
+        print('Division /       | Tangent tan')
+        print('Exponentiation ^ | Logarithm log')
         print('*********************************')
 
         while True:
@@ -176,6 +176,7 @@ while True:
             for i in calculation:
                 if i == '+' or i == '_' or i == '*' or i == '/' or i == '^' or i == '!':
                     operator = i.strip()
+                    break
 
             str_operator = ''.join(re.split("[^a-zA-Z]*", calculation))
             num = re.findall(r'-?\d+\.?\d*', calculation)
@@ -259,6 +260,7 @@ while True:
                         for f in next_step:
                             if f == '+' or f == '_' or f == '*' or f == '/':
                                 operator = f.strip()
+                                break
                         x = result
                         num = re.findall(r'-?\d+\.?\d*', next_step)
                         y = float(num[0])
