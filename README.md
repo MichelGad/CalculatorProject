@@ -20,7 +20,7 @@ Each is made for a specific purpose
 
 -Get the code:
     ```
-    git clone https://github.com/MichelGad/PythonProject
+   https://github.com/MichelGad/PythonProject
     ```
     
 -How to Run?
