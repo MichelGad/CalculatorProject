@@ -26,7 +26,7 @@ class advanced:
     def decision(self, operator):
         if operator == '+':
             return self.add()
-        elif operator == '_':
+        elif operator == '-':
             return self.sub()
         elif operator == '*':
             return self.multi()

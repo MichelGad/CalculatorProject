@@ -106,6 +106,9 @@ while True:
         for i in calculation:
             if i == '+' or i == '_' or i == '*' or i == '/':
                 operator = i.strip()
+                break
+
+        print(operator)
 
         num = re.findall(r'-?\d+\.?\d*', calculation)
         x = float(num[0])
@@ -136,6 +139,7 @@ while True:
             # check if user wants another calculation
             # break the while loop if answer is no
             print('If you want to quit: Write(q)')
+            print('For next step: operator y')
             next_step = input('Next Step: ')
             if next_step == 'q':
                 break
@@ -247,6 +251,7 @@ while True:
                     # check if user wants another calculation
                     # break the while loop if answer is no
                     print('If you want to quit: Write(q)')
+                    print('For next step: operator y')
                     next_step = input('Next Step: ')
                     if next_step == 'q':
                         break
