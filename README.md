@@ -18,10 +18,10 @@ Each is made for a specific purpose
   - Install the python 3.8 or newer.
   - Install the any python IDE.
 
-- Get the code:
+-Get the code:
     ```
     git clone https://github.com/MichelGad/PythonProject
     ```
- - How to Run?
+-How to Run?
   - simply open the calculator file in any python IDE to run the Calculator app.
 
