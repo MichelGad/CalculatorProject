@@ -24,4 +24,4 @@ Each is made for a specific purpose
     ```
     
 -How to Run?
-  - simply open the calculator file in any python IDE to run the Calculator app.
+  - Simply open the calculator.py file in any python IDE to run the Calculator app.
