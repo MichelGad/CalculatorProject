@@ -1,5 +1,7 @@
 # Import the classes and functions from the main file
-import main as mn
+import simple as sp
+import advanced as ad
+import scientific as sc
 import re
 
 while True:
@@ -57,7 +59,7 @@ while True:
                         print('not a number!')
                         continue
 
-                obj = mn.simp(x, y)
+                obj = sp.simple(x, y)
 
                 if choice == '1':
                     print(x, '+', y, '=', obj.add())
@@ -94,7 +96,7 @@ while True:
         print('Equation Format: X operator Y')
         print('*********************************')
         print('Addition +')
-        print('Subtraction -')
+        print('Subtraction _')
         print('Multiplication *')
         print('Division /')
         print('*********************************')
@@ -102,7 +104,7 @@ while True:
         calculation = input("Enter your equation: ")
 
         for i in calculation:
-            if i == '+' or i == '-' or i == '*' or i == '/':
+            if i == '+' or i == '_' or i == '*' or i == '/':
                 operator = i.strip()
 
         num = re.findall(r'-?\d+\.?\d*', calculation)
@@ -112,22 +114,22 @@ while True:
         while True:
 
             if operator == '+':
-                adv = mn.advanced(x, y)
+                adv = ad.advanced(x, y)
                 result = adv.decision(operator)
                 print(x, operator, y, '=', result)
 
-            if operator == '-':
-                adv = mn.advanced(x, y)
+            if operator == '_':
+                adv = ad.advanced(x, y)
                 result = adv.decision(operator)
                 print(x, operator, y, '=', result)
 
             if operator == '*':
-                adv = mn.advanced(x, y)
+                adv = ad.advanced(x, y)
                 result = adv.decision(operator)
                 print(x, operator, y, '=', result)
 
             if operator == '/':
-                adv = mn.advanced(x, y)
+                adv = ad.advanced(x, y)
                 result = adv.decision(operator)
                 print(x, operator, y, '=', result)
 
@@ -139,7 +141,7 @@ while True:
                 break
             else:
                 for i in next_step:
-                    if i == '+' or i == '-' or i == '*' or i == '/':
+                    if i == '+' or i == '_' or i == '*' or i == '/':
                         operator = i.strip()
 
                 num = re.findall(r'-?\d+\.?\d*', next_step)
@@ -155,7 +157,7 @@ while True:
         print('Equation Format: X operator Y')
         print('*********************************')
         print('Addition +       | Factorial!')
-        print('Subtraction -    | sin')
+        print('Subtraction _    | sin')
         print('Multiplication * | cos')
         print('Division /       | tan')
         print('Exponent ^       | log')
@@ -168,7 +170,7 @@ while True:
                 break
 
             for i in calculation:
-                if i == '+' or i == '-' or i == '*' or i == '/' or i == '^' or i == '!':
+                if i == '+' or i == '_' or i == '*' or i == '/' or i == '^' or i == '!':
                     operator = i.strip()
 
             str_operator = ''.join(re.split("[^a-zA-Z]*", calculation))
@@ -179,27 +181,27 @@ while True:
 
                 x = float(num[0])
                 if str_operator == 'cos':
-                    sci = mn.new_scientific(x)
+                    sci = sc.new_scientific(x)
                     result = sci.str_decision(str_operator)
                     print(str_operator, x, '=', result)
 
                 if str_operator == 'sin':
-                    sci = mn.new_scientific(x)
+                    sci = sc.new_scientific(x)
                     result = sci.str_decision(str_operator)
                     print(str_operator, x, '=', result)
 
                 if str_operator == 'tan':
-                    sci = mn.new_scientific(x)
+                    sci = sc.new_scientific(x)
                     result = sci.str_decision(str_operator)
                     print(str_operator, x, '=', result)
 
                 if str_operator == 'log':
-                    sci = mn.new_scientific(x)
+                    sci = sc.new_scientific(x)
                     result = sci.str_decision(str_operator)
                     print(str_operator, x, '=', result)
 
                 if operator == '!':
-                    sci = mn.new_scientific(x)
+                    sci = sc.new_scientific(x)
                     result = sci.str_decision(operator)
                     print(str_operator, x, '=', result)
 
@@ -211,34 +213,34 @@ while True:
                 else:
                     print("Invalid Input")
 
-            if operator == '+' or operator == '-' or operator == '*' or operator == '/' or operator == '^':
+            if operator == '+' or operator == '_' or operator == '*' or operator == '/' or operator == '^':
 
                 x = float(num[0])
                 y = float(num[1])
 
                 while True:
                     if operator == '+':
-                        sci = mn.scientific(x, y)
+                        sci = sc.scientific(x, y)
                         result = sci.decision(operator)
                         print(x, operator, y, '=', result)
 
-                    if operator == '-':
-                        sci = mn.scientific(x, y)
+                    if operator == '_':
+                        sci = sc.scientific(x, y)
                         result = sci.decision(operator)
                         print(x, operator, y, '=', result)
 
                     if operator == '*':
-                        sci = mn.scientific(x, y)
+                        sci = sc.scientific(x, y)
                         result = sci.decision(operator)
                         print(x, operator, y, '=', result)
 
                     if operator == '/':
-                        sci = mn.scientific(x, y)
+                        sci = sc.scientific(x, y)
                         result = sci.decision(operator)
                         print(x, operator, y, '=', result)
 
                     if operator == '^':
-                        sci = mn.scientific(x, y)
+                        sci = sc.scientific(x, y)
                         result = sci.decision(operator)
                         print(x, operator, y, '=', result)
 
@@ -250,7 +252,7 @@ while True:
                         break
                     else:
                         for f in next_step:
-                            if f == '+' or f == '-' or f == '*' or f == '/':
+                            if f == '+' or f == '_' or f == '*' or f == '/':
                                 operator = f.strip()
                         x = result
                         num = re.findall(r'-?\d+\.?\d*', next_step)
