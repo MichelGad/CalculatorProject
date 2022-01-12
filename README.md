@@ -22,6 +22,6 @@ Each is made for a specific purpose
     ```
     git clone https://github.com/MichelGad/PythonProject
     ```
+    
 -How to Run?
   - simply open the calculator file in any python IDE to run the Calculator app.
-
