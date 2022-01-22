@@ -14,9 +14,10 @@ while True:
     print('Or q.Quit')
     print('*********************************')
 
+    choice = input('Enter your choice(1/2/3/q): ')
+
     # take input from the user
     while True:
-        choice = input('Enter your choice(1/2/3/q): ')
         if choice in ('1', '2', '3', 'q'):
             break
         else:
@@ -36,10 +37,10 @@ while True:
             print('*********************************')
 
             # check if choice is one of the four options
-            choice = input('Enter choice(1/2/3/4): ')
+            chioce = input('Enter choice(1/2/3/4): ')
 
             # check if choice is one of the four options
-            if choice in ('1', '2', '3', '4'):
+            if chioce in ('1', '2', '3', '4'):
 
                 while True:
                     x = input('Enter first number: ')
@@ -61,16 +62,16 @@ while True:
 
                 obj = sp.simple(x, y)
 
-                if choice == '1':
+                if chioce == '1':
                     print(x, '+', y, '=', obj.add())
 
-                elif choice == '2':
+                elif chioce == '2':
                     print(x, '-', y, '=', obj.sub())
 
-                elif choice == '3':
+                elif chioce == '3':
                     print(x, '*', y, '=', obj.multi())
 
-                elif choice == '4':
+                elif chioce == '4':
                     print(x, '/', y, '=', obj.div())
 
             else:
@@ -88,7 +89,7 @@ while True:
                 print("Invalid Input")
 
     # Advanced Calculator
-    if choice == '2':
+    elif choice == '2':
         operator = ''
         print('*********************************')
         print('Advanced Calculator')
@@ -152,7 +153,7 @@ while True:
                 y = float(num[0])
 
     # Scientific Calculator
-    if choice == '3':
+    elif choice == '3':
         operator = ''
         print('*********************************')
         print('Scientific Calculator')
@@ -265,5 +266,5 @@ while True:
                         num = re.findall(r'-?\d+\.?\d*', next_step)
                         y = float(num[0])
 
-    if choice == 'q':
+    elif choice == 'q':
         break
