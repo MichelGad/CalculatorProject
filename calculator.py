@@ -72,7 +72,10 @@ while True:
                     print(x, '*', y, '=', obj.multi())
 
                 elif chioce == '4':
-                    print(x, '/', y, '=', obj.div())
+                    try:
+                        print(x, '/', y, '=', obj.div())
+                    except ZeroDivisionError:
+                        print('Second number can not be zero!')
 
             else:
                 print("Invalid Input")
@@ -131,10 +134,13 @@ while True:
                 print(x, operator, y, '=', result)
 
             if operator == '/':
-                adv = ad.advanced(x, y)
-                result = adv.decision(operator)
-                print(x, operator, y, '=', result)
-
+                try:
+                    adv = ad.advanced(x, y)
+                    result = adv.decision(operator)
+                    print(x, operator, y, '=', result)
+                except ZeroDivisionError:
+                    print('Second number can not be zero!')
+                    break
             # check if user wants another calculation
             # break the while loop if answer is no
             print('If you want to quit: Write(q)')
