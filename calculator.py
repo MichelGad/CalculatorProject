@@ -22,7 +22,7 @@ while True:
             break
         else:
             print("Invalid Input")
-
+            break
     # Simple Calculator
     if choice == '1':
         while True:
